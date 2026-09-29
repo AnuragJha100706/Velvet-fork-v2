@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Repertory — The Velvet Fork</title>
+    <meta name="description" content="Explore our seasonal culinary catalog featuring authentic North Indian, South Indian, Chinese, Italian, and Continental gastronomic creations.">
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom Theme & Animations -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap 5 JS Bundle & Main Engine -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+
+    <!-- STICKY NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top vf-navbar" aria-label="Main Navigation">
+        <div class="container">
+            <a class="vf-brand" href="index.html">
+                <div class="vf-brand-logo">VF</div>
+                <div>
+                    <h1 class="vf-brand-title">The Velvet Fork</h1>
+                    <span class="vf-brand-sub">Haute Cuisine • Greater Noida</span>
+                </div>
+            </a>
+
+            <!-- Right Actions for Desktop + Mobile Toggler -->
+            <div class="d-flex align-items-center gap-2 order-lg-3">
+                <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+                    <i class="bi bi-moon-stars-fill text-secondary"></i>
+                </button>
+
+                <div class="vf-nav-auth d-flex align-items-center gap-2">
+                    <a href="login.html" class="btn btn-sm btn-vf-outline py-1 px-3">Sign In</a>
+                    <a href="reservation.html" class="btn btn-sm btn-vf-primary py-1 px-3 d-none d-sm-inline-flex">Reserve</a>
+                </div>
+
+                <button class="navbar-toggler border-0 p-1 ms-1 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Toggle navigation">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <div class="collapse navbar-collapse justify-content-center order-lg-2">
+                <ul class="navbar-nav gap-1">
+                    <li class="nav-item"><a class="vf-nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="vf-nav-link active" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="vf-nav-link" href="reservation.html">Reservation</a></li>
+                    <li class="nav-item"><a class="vf-nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="vf-nav-link" href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE OFFCANVAS DRAWER -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <div class="d-flex align-items-center gap-2">
+                <div class="vf-brand-logo" style="width:36px; height:36px; font-size:1.1rem;">VF</div>
+                <h5 class="offcanvas-title fw-bold" id="mobileMenuOffcanvasLabel">The Velvet Fork</h5>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
+            <ul class="navbar-nav gap-2 fs-5">
+                <li class="nav-item"><a class="vf-nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="vf-nav-link active" href="menu.html">Culinary Menu</a></li>
+                <li class="nav-item"><a class="vf-nav-link" href="reservation.html">Book a Table</a></li>
+                <li class="nav-item"><a class="vf-nav-link" href="about.html">Our Heritage</a></li>
+                <li class="nav-item"><a class="vf-nav-link" href="reviews.html">Guest Reviews</a></li>
+                <li class="nav-item"><a class="vf-nav-link" href="profile.html">VIP Profile</a></li>
+            </ul>
+            <div class="pt-4 border-top d-flex flex-column gap-2">
+                <a href="reservation.html" class="btn btn-vf-primary w-100 justify-content-center">Book an Experience</a>
+                <a href="login.html" class="btn btn-vf-outline w-100 justify-content-center">Member Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="py-5">
+        <div class="container">
+            <!-- Header -->
+            <div class="text-center max-w-700 mx-auto mb-4">
+                <span class="vf-badge-pill">Epicurean Creations</span>
+                <h1 class="display-5 fw-bold mb-2">The Culinary Repertory</h1>
+                <p class="text-muted">Every dish is thoughtfully conceived, marrying heirloom spices, organic farm harvests, and contemporary culinary technique.</p>
+            </div>
+
+            <!-- Search & Filter Controls -->
+            <div class="row justify-content-center mb-4 g-3">
+                <div class="col-md-6 col-lg-5">
+                    <div class="input-group shadow-sm rounded-pill overflow-hidden border">
+                        <span class="input-group-text bg-body border-0 ps-3 text-muted"><i class="bi bi-search"></i></span>
+                        <input type="text" id="menu-search-input" class="form-control bg-body border-0 py-2" placeholder="Search dishes, spices, ingredients..." autocomplete="off">
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <select id="diet-filter-select" class="form-select shadow-sm rounded-pill py-2 border">
+                        <option value="all" selected>All Dietary Preferences</option>
+                        <option value="veg">Vegetarian Only (Pure Veg)</option>
+                        <option value="non-veg">Non-Vegetarian Only</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Category Pills -->
+            <div class="vf-filter-pills" role="tablist">
+                <button class="vf-filter-pill active" data-category="all" type="button">All Cuisines</button>
+                <button class="vf-filter-pill" data-category="north-indian" type="button">North Indian</button>
+                <button class="vf-filter-pill" data-category="south-indian" type="button">South Indian</button>
+                <button class="vf-filter-pill" data-category="chinese" type="button">Chinese</button>
+                <button class="vf-filter-pill" data-category="italian" type="button">Italian</button>
+                <button class="vf-filter-pill" data-category="continental" type="button">Continental</button>
+                <button class="vf-filter-pill" data-category="beverages" type="button">Beverages & Wine</button>
+            </div>
+
+            <!-- Dishes Grid -->
+            <div id="menu-grid" class="row g-4" aria-live="polite">
+                <!-- Dynamically rendered by main.js -->
+            </div>
+
+            <!-- VIRTUAL SOMMELIER & FOOD-WINE PAIRING SECTION -->
+            <section class="mt-5 pt-4 border-top" id="sommelier">
+                <div class="vf-sommelier-card">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-2 text-center text-lg-start">
+                            <div class="vf-sommelier-icon mx-auto mx-lg-0">
+                                <i class="bi bi-cup-straw"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <span class="vf-badge-pill mb-2">Cellar Master AI</span>
+                            <h3 class="fw-bold mb-1">Virtual Sommelier Pairing</h3>
+                            <p class="text-muted small mb-3">Select any signature dish to discover cellar-curated wine, draught, and digestif harmonies.</p>
+                            <select id="vf-sommelier-select" class="form-select rounded-pill">
+                                <option value="butter-chicken" selected>Velvet Butter Chicken</option>
+                                <option value="shahi-paneer">Shahi Paneer Artisanal</option>
+                                <option value="four-cheese-pizza">Quattro Formaggi Sourdough</option>
+                                <option value="mutton-curry">Bihari Champaran Meat</option>
+                                <option value="alfredo-pasta">Fettuccine Truffle Alfredo</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="p-3 bg-body rounded-4 border shadow-sm" id="vf-sommelier-result">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span class="badge bg-danger-subtle text-danger fw-bold" id="vf-sommelier-wine">Reserve Pinot Noir</span>
+                                    <span class="vf-price small" id="vf-sommelier-price">₹300</span>
+                                </div>
+                                <h6 class="fw-bold mb-1" id="vf-sommelier-title">Cellar Pairing Recommendation</h6>
+                                <p class="text-muted small mb-2 fst-italic" id="vf-sommelier-notes">
+                                    "Velvety cherry tannins complement the creamy acidity of the satin tomato reduction."
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center text-muted small border-top pt-2">
+                                    <span><i class="bi bi-thermometer-half text-danger"></i> Serving: <b id="vf-sommelier-temp">16°C</b></span>
+                                    <span><i class="bi bi-wine text-warning"></i> Glass: <b id="vf-sommelier-glass">Burgundy Goblet</b></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHEF'S SECRET UNLISTED MYSTERY SCRATCH CARD -->
+            <section class="mt-5">
+                <div class="vf-mystery-card" id="vf-mystery-card">
+                    <div id="vf-mystery-cover">
+                        <div class="display-6 text-warning mb-2"><i class="bi bi-stars"></i></div>
+                        <h4 class="fw-bold text-white mb-1">Chef's Secret Unlisted Tasting Special</h4>
+                        <p class="text-white-50 small mb-3">Tap anywhere to uncover today's off-menu gastronomic creation & secret VIP privilege</p>
+                        <button class="btn btn-sm btn-outline-warning rounded-pill px-4">Tap to Reveal Secret</button>
+                    </div>
+                    <div id="vf-mystery-content" class="d-none">
+                        <div class="badge bg-warning text-dark fw-bold mb-2">Unlocked Today</div>
+                        <h4 class="fw-bold text-white mb-1">Smoked Saffron Paneer Tikka with Wild Forest Honey Glaze</h4>
+                        <p class="text-white-50 small mb-2">Wood-smoked over dried applewood chips, draped in organic Kashmir honeycomb.</p>
+                        <div class="d-inline-block bg-white text-dark py-1 px-3 rounded-pill fw-bold small">
+                            Secret Code: <span class="text-danger fw-bold">VELVETVIP15</span> (15% Off Your Booking)
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="vf-footer">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="vf-brand mb-3">
+                        <div class="vf-brand-logo">VF</div>
+                        <div>
+                            <h4 class="vf-brand-title">The Velvet Fork</h4>
+                            <span class="vf-brand-sub">Haute Cuisine • Greater Noida</span>
+                        </div>
+                    </div>
+                    <p class="text-muted small mb-4">
+                        An exquisite sanctuary dedicated to gastronomic passion, heritage Indian recipes, 
+                        and artisanal global flavors presented in timeless luxury.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="https://facebook.com" class="vf-social-btn" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://instagram.com" class="vf-social-btn" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://x.com" class="vf-social-btn" target="_blank" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://linkedin.com" class="vf-social-btn" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6 class="fw-bold mb-3">Curated Links</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="index.html" class="vf-footer-link">Home Sanctuary</a></li>
+                        <li><a href="menu.html" class="vf-footer-link">Culinary Menu</a></li>
+                        <li><a href="reservation.html" class="vf-footer-link">Table Reservations</a></li>
+                        <li><a href="about.html" class="vf-footer-link">Our Heritage</a></li>
+                        <li><a href="reviews.html" class="vf-footer-link">Guest Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-6">
+                    <h6 class="fw-bold mb-3">Concierge</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
+                        <li><i class="bi bi-geo-alt me-2 text-danger"></i> Alpha 2, Greater Noida</li>
+                        <li><i class="bi bi-telephone me-2 text-danger"></i> +91 8709547016</li>
+                        <li><i class="bi bi-envelope me-2 text-danger"></i> velvetfork@gmail.com</li>
+                        <li><i class="bi bi-clock me-2 text-danger"></i> Mon–Sun: 11:00 AM – 11:30 PM</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">VIP Gastronomy Circle</h6>
+                    <p class="text-muted small mb-3">
+                        Receive private tasting invitations, seasonal menu updates, and cellar releases.
+                    </p>
+                    <form class="newsletter-form d-flex gap-2">
+                        <input type="email" class="form-control form-control-sm rounded-pill" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-sm btn-vf-primary px-3 rounded-pill" aria-label="Subscribe">
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pt-4 border-top d-flex justify-content-between align-items-center flex-wrap gap-2 small text-muted">
+                <div>&copy; 2025 The Velvet Fork. All Rights Reserved.</div>
+                <div>Designed with <span class="text-danger">♥</span> by The Velvet Fork Culinary & Design Group</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING PRE-ORDER TASTING TRAY BUTTON -->
+    <button class="vf-tray-floating-btn" id="vf-open-tray-btn" data-bs-toggle="offcanvas" data-bs-target="#vfTastingTrayOffcanvas" aria-controls="vfTastingTrayOffcanvas">
+        <i class="bi bi-basket2-fill"></i>
+        <span>Tasting Tray</span>
+        <span class="vf-tray-badge" id="vf-tray-badge-count">0</span>
+    </button>
+
+    <!-- PRE-ORDER TASTING TRAY OFFCANVAS -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="vfTastingTrayOffcanvas" aria-labelledby="vfTastingTrayLabel" style="width: 400px; max-width: 90vw;">
+        <div class="offcanvas-header border-bottom">
+            <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-bag-check-fill text-danger fs-4"></i>
+                <div>
+                    <h5 class="offcanvas-title fw-bold mb-0" id="vfTastingTrayLabel">Pre-Order Tasting Tray</h5>
+                    <small class="text-muted">Table Pre-Ordering & Bill Estimator</small>
+                </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between p-3">
+            <!-- Tray Items List -->
+            <div id="vf-tray-items-container" class="flex-grow-1 overflow-auto pe-1 mb-3">
+                <!-- Dynamically populated by main.js -->
+                <div class="text-center py-5 text-muted">
+                    <div class="display-6 mb-2"><i class="bi bi-cart-x"></i></div>
+                    <p class="small mb-0">Your tasting tray is currently empty.<br>Browse the menu and click <b>+ Tasting Tray</b> on any dish.</p>
+                </div>
+            </div>
+
+            <!-- Bill Estimator & Splitter -->
+            <div class="border-top pt-3 bg-subtle p-3 rounded-3">
+                <div class="d-flex justify-content-between small text-muted mb-1">
+                    <span>Tray Subtotal:</span>
+                    <span id="vf-tray-subtotal" class="fw-bold text-body">₹0</span>
+                </div>
+                <div class="d-flex justify-content-between small text-muted mb-2">
+                    <span>GST (5% Hospitality):</span>
+                    <span id="vf-tray-tax" class="fw-bold text-body">₹0</span>
+                </div>
+                <div class="d-flex justify-content-between fw-bold fs-6 border-top pt-2 mb-3">
+                    <span>Estimated Total:</span>
+                    <span id="vf-tray-total" class="text-danger">₹0</span>
+                </div>
+
+                <!-- Bill Splitter -->
+                <div class="mb-3 pt-2 border-top">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <small class="fw-bold"><i class="bi bi-people-fill text-warning me-1"></i> Split Among Diners:</small>
+                        <span class="badge bg-secondary-subtle text-body fw-bold" id="vf-split-count-label">2 Guests</span>
+                    </div>
+                    <input type="range" class="form-range" min="1" max="10" value="2" id="vf-split-slider">
+                    <div class="d-flex justify-content-between small text-muted">
+                        <span>Per Person Share:</span>
+                        <b class="text-success" id="vf-split-per-person">₹0 / guest</b>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column gap-2">
+                    <a href="reservation.html" class="btn btn-vf-primary w-100 justify-content-center" id="vf-attach-tray-btn">
+                        <i class="bi bi-calendar-check me-1"></i> Attach Tray to Table Reservation
+                    </a>
+                    <button class="btn btn-sm btn-outline-secondary w-100" id="vf-clear-tray-btn">Clear Tasting Tray</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AMBIENT LOUNGE ATMOSPHERE PLAYER (GLOBAL) -->
+    <div class="vf-audio-player-bar" id="vf-global-audio-player">
+        <button class="vf-audio-play-btn" id="vf-audio-toggle" aria-label="Toggle Lounge Atmosphere">
+            <i class="bi bi-play-fill" id="vf-audio-icon"></i>
+        </button>
+        <div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="small fw-bold">Atmosphere: Parisian Lounge</span>
+                <div class="vf-audio-wave" id="vf-audio-wave">
+                    <span class="vf-audio-bar"></span>
+                    <span class="vf-audio-bar"></span>
+                    <span class="vf-audio-bar"></span>
+                </div>
+            </div>
+            <small class="text-muted d-block" style="font-size:0.72rem;">Acoustic Chords • Soft Velvet Mood</small>
+        </div>
+    </div>
+
+    <!-- SIMULATED LUXURY AI CONCIERGE CHAT WIDGET (GLOBAL) -->
+    <button class="vf-ai-concierge-btn" id="vf-concierge-toggle" aria-label="Open Velvet Concierge">
+        <i class="bi bi-chat-dots-fill"></i>
+        <span class="vf-ai-badge-pulse"></span>
+    </button>
+
+    <div class="vf-concierge-window" id="vf-concierge-window">
+        <div class="vf-concierge-header">
+            <div class="d-flex align-items-center gap-2">
+                <div class="rounded-circle bg-white text-danger d-flex align-items-center justify-content-center fw-bold" style="width:30px; height:30px; font-size:0.85rem;">VF</div>
+                <div>
+                    <h6 class="mb-0 fw-bold text-white">Velvet AI Concierge</h6>
+                    <small class="text-white-50" style="font-size:0.7rem;"><i class="bi bi-circle-fill text-success" style="font-size:0.5rem;"></i> Active • Fine Dining Butler</small>
+                </div>
+            </div>
+            <button class="btn btn-sm text-white p-0" id="vf-concierge-close" aria-label="Close Concierge"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="vf-chat-messages" id="vf-chat-messages">
+            <div class="vf-msg-bubble vf-msg-bot">
+                Good evening, Connoisseur. I am your Velvet Fork concierge. How may I assist your dining plans today?
+            </div>
+            <div class="d-flex flex-wrap gap-1 mt-1">
+                <button class="vf-prompt-chip" data-prompt="wine">🍷 Best wine pairings?</button>
+                <button class="vf-prompt-chip" data-prompt="veg">🥗 Vegetarian signatures?</button>
+                <button class="vf-prompt-chip" data-prompt="hours">🕒 Timings & Valet?</button>
+                <button class="vf-prompt-chip" data-prompt="reserve">📅 Book a table</button>
+            </div>
+        </div>
+        <form class="p-2 bg-surface border-top d-flex gap-2" id="vf-concierge-form">
+            <input type="text" id="vf-concierge-input" class="form-control form-control-sm rounded-pill" placeholder="Ask about menu, pairings, bookings..." required>
+            <button type="submit" class="btn btn-sm btn-vf-primary rounded-circle" style="width:32px; height:32px; padding:0; display:flex; align-items:center; justify-content:center;">
+                <i class="bi bi-arrow-up"></i>
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>

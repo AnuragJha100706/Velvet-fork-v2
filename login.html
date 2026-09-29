@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Access & Concierge Sign In — The Velvet Fork</title>
+    <meta name="description" content="Access your Velvet Fork VIP Diner account. View table reservations, manage favorite dishes, and track gourmet loyalty points.">
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom Theme & Animations -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap 5 JS Bundle & Main Engine -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+
+    <!-- STICKY NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top vf-navbar" aria-label="Main Navigation">
+        <div class="container">
+            <a class="vf-brand" href="index.html">
+                <div class="vf-brand-logo">VF</div>
+                <div>
+                    <h1 class="vf-brand-title">The Velvet Fork</h1>
+                    <span class="vf-brand-sub">Haute Cuisine • Greater Noida</span>
+                </div>
+            </a>
+
+            <!-- Right Actions for Desktop + Mobile Toggler -->
+            <div class="d-flex align-items-center gap-2 order-lg-3">
+                <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+                    <i class="bi bi-moon-stars-fill text-secondary"></i>
+                </button>
+
+                <div class="vf-nav-auth d-flex align-items-center gap-2">
+                    <a href="login.html" class="btn btn-sm btn-vf-outline py-1 px-3">Sign In</a>
+                    <a href="reservation.html" class="btn btn-sm btn-vf-primary py-1 px-3 d-none d-sm-inline-flex">Reserve</a>
+                </div>
+
+                <button class="navbar-toggler border-0 p-1 ms-1 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Toggle navigation">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <div class="collapse navbar-collapse justify-content-center order-lg-2">
+                <ul class="navbar-nav gap-1">
+                    <li class="nav-item"><a class="vf-nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="vf-nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="vf-nav-link" href="reservation.html">Reservation</a></li>
+                    <li class="nav-item"><a class="vf-nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="vf-nav-link" href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE OFFCANVAS DRAWER -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <div class="d-flex align-items-center gap-2">
+                <div class="vf-brand-logo" style="width:36px; height:36px; font-size:1.1rem;">VF</div>
+                <h5 class="offcanvas-title fw-bold" id="mobileMenuOffcanvasLabel">The Velvet Fork</h5>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
+            <ul class="navbar-nav gap-2 fs-5">
+                <li class="nav-item"><a class="vf-nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="vf-nav-link" href="menu.html">Culinary Menu</a></li>
+                <li class="nav-item"><a class="vf-nav-link" href="reservation.html">Book a Table</a></li>
+                <li class="nav-item"><a class="vf-nav-link" href="about.html">Our Heritage</a></li>
+                <li class="nav-item"><a class="vf-nav-link" href="reviews.html">Guest Reviews</a></li>
+                <li class="nav-item"><a class="vf-nav-link" href="profile.html">VIP Profile</a></li>
+            </ul>
+            <div class="pt-4 border-top d-flex flex-column gap-2">
+                <a href="reservation.html" class="btn btn-vf-primary w-100 justify-content-center">Book an Experience</a>
+                <a href="login.html" class="btn btn-vf-outline w-100 justify-content-center">Member Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="py-5 d-flex align-items-center" style="min-height: calc(100vh - 180px);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-7 col-lg-5 col-xl-4">
+                    <div class="vf-card p-4 p-sm-5 shadow-lg border-0">
+                        <div class="text-center mb-4">
+                            <div class="vf-brand-logo mx-auto mb-2" style="width:48px; height:48px; font-size:1.4rem;">VF</div>
+                            <h3 class="fw-bold mb-1">VIP Diner Access</h3>
+                            <p class="text-muted small">Manage reservations & unlock epicurean rewards.</p>
+                        </div>
+
+                        <!-- Tab Switcher -->
+                        <ul class="nav nav-pills nav-fill bg-body-tertiary p-1 rounded-pill mb-4 border" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active rounded-pill py-2 small fw-bold" id="tab-login-btn" data-bs-toggle="pill" data-bs-target="#tab-login" type="button" role="tab">Sign In</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link rounded-pill py-2 small fw-bold" id="tab-register-btn" data-bs-toggle="pill" data-bs-target="#tab-register" type="button" role="tab">Create Account</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <!-- 1. SIGN IN TAB -->
+                            <div class="tab-pane fade show active" id="tab-login" role="tabpanel">
+                                <form id="login-form">
+                                    <div class="mb-3">
+                                        <label class="form-label small fw-bold text-muted" for="login-username">Username or Email</label>
+                                        <input type="text" id="login-username" class="form-control rounded-3" placeholder="e.g. lucky or arpit12" required autocomplete="username">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label small fw-bold text-muted" for="login-password">Password</label>
+                                        <input type="password" id="login-password" class="form-control rounded-3" placeholder="Enter your password" required autocomplete="current-password">
+                                    </div>
+                                    <button type="submit" class="btn btn-vf-primary w-100 justify-content-center py-2">
+                                        <i class="bi bi-box-arrow-in-right me-1"></i> Sign In to VIP Portal
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- 2. CREATE ACCOUNT TAB -->
+                            <div class="tab-pane fade" id="tab-register" role="tabpanel">
+                                <form id="register-form">
+                                    <div class="mb-2">
+                                        <label class="form-label small fw-bold text-muted" for="reg-name">Full Name</label>
+                                        <input type="text" id="reg-name" class="form-control rounded-3" placeholder="e.g. Anurag Jha" required autocomplete="name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label small fw-bold text-muted" for="reg-email">Email Address</label>
+                                        <input type="email" id="reg-email" class="form-control rounded-3" placeholder="e.g. anurag@velvetfork.com" required autocomplete="email">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label small fw-bold text-muted" for="reg-phone">Phone Number (Optional)</label>
+                                        <input type="tel" id="reg-phone" class="form-control rounded-3" placeholder="+91 ..." autocomplete="tel">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label small fw-bold text-muted" for="reg-username">Choose Username</label>
+                                        <input type="text" id="reg-username" class="form-control rounded-3" placeholder="e.g. anurag_gourmet" required autocomplete="username">
+                                    </div>
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-6">
+                                            <label class="form-label small fw-bold text-muted" for="reg-password">Password</label>
+                                            <input type="password" id="reg-password" class="form-control rounded-3" placeholder="Min. 4 chars" required autocomplete="new-password">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label small fw-bold text-muted" for="reg-confirm">Confirm</label>
+                                            <input type="password" id="reg-confirm" class="form-control rounded-3" placeholder="Repeat" required autocomplete="new-password">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-vf-primary w-100 justify-content-center py-2">
+                                        <i class="bi bi-person-plus me-1"></i> Create VIP Account
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4 small text-muted">
+                            <span>By continuing, you agree to our </span>
+                            <a href="#" class="text-decoration-underline text-muted">Dining Terms</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="vf-footer mt-auto py-4">
+        <div class="container text-center small text-muted">
+            &copy; 2025 The Velvet Fork. All Rights Reserved. Crafted for Haute Cuisine Connoisseurs.
+        </div>
+    </footer>
+
+    <!-- AMBIENT LOUNGE ATMOSPHERE PLAYER (GLOBAL) -->
+    <div class="vf-audio-player-bar" id="vf-global-audio-player">
+        <button class="vf-audio-play-btn" id="vf-audio-toggle" aria-label="Toggle Lounge Atmosphere">
+            <i class="bi bi-play-fill" id="vf-audio-icon"></i>
+        </button>
+        <div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="small fw-bold">Atmosphere: Parisian Lounge</span>
+                <div class="vf-audio-wave" id="vf-audio-wave">
+                    <span class="vf-audio-bar"></span>
+                    <span class="vf-audio-bar"></span>
+                    <span class="vf-audio-bar"></span>
+                </div>
+            </div>
+            <small class="text-muted d-block" style="font-size:0.72rem;">Acoustic Chords • Soft Velvet Mood</small>
+        </div>
+    </div>
+
+    <!-- SIMULATED LUXURY AI CONCIERGE CHAT WIDGET (GLOBAL) -->
+    <button class="vf-ai-concierge-btn" id="vf-concierge-toggle" aria-label="Open Velvet Concierge">
+        <i class="bi bi-chat-dots-fill"></i>
+        <span class="vf-ai-badge-pulse"></span>
+    </button>
+
+    <div class="vf-concierge-window" id="vf-concierge-window">
+        <div class="vf-concierge-header">
+            <div class="d-flex align-items-center gap-2">
+                <div class="rounded-circle bg-white text-danger d-flex align-items-center justify-content-center fw-bold" style="width:30px; height:30px; font-size:0.85rem;">VF</div>
+                <div>
+                    <h6 class="mb-0 fw-bold text-white">Velvet AI Concierge</h6>
+                    <small class="text-white-50" style="font-size:0.7rem;"><i class="bi bi-circle-fill text-success" style="font-size:0.5rem;"></i> Active • Fine Dining Butler</small>
+                </div>
+            </div>
+            <button class="btn btn-sm text-white p-0" id="vf-concierge-close" aria-label="Close Concierge"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="vf-chat-messages" id="vf-chat-messages">
+            <div class="vf-msg-bubble vf-msg-bot">
+                Good evening, Connoisseur. I am your Velvet Fork concierge. How may I assist your dining plans today?
+            </div>
+            <div class="d-flex flex-wrap gap-1 mt-1">
+                <button class="vf-prompt-chip" data-prompt="wine">🍷 Best wine pairings?</button>
+                <button class="vf-prompt-chip" data-prompt="veg">🥗 Vegetarian signatures?</button>
+                <button class="vf-prompt-chip" data-prompt="hours">🕒 Timings & Valet?</button>
+                <button class="vf-prompt-chip" data-prompt="reserve">📅 Book a table</button>
+            </div>
+        </div>
+        <form class="p-2 bg-surface border-top d-flex gap-2" id="vf-concierge-form">
+            <input type="text" id="vf-concierge-input" class="form-control form-control-sm rounded-pill" placeholder="Ask about menu, pairings, bookings..." required>
+            <button type="submit" class="btn btn-sm btn-vf-primary rounded-circle" style="width:32px; height:32px; padding:0; display:flex; align-items:center; justify-content:center;">
+                <i class="bi bi-arrow-up"></i>
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>

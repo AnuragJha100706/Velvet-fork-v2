@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Velvet Fork — Haute Cuisine & Luxury Dining Experience</title>
+    <meta name="description" content="Immerse yourself in world-class culinary artistry at The Velvet Fork. Artisanal recipes, Michelin-curated dining, and majestic ambiance in Greater Noida & Delhi NCR.">
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom Theme & Animations -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap 5 JS Bundle & Main Engine -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+
+    <!-- STICKY NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top vf-navbar" aria-label="Main Navigation">
+        <div class="container">
+            <a class="vf-brand" href="index.html">
+                <div class="vf-brand-logo">VF</div>
+                <div>
+                    <h1 class="vf-brand-title">The Velvet Fork</h1>
+                    <span class="vf-brand-sub">Haute Cuisine • Greater Noida</span>
+                </div>
+            </a>
+
+            <!-- Right Actions for Desktop + Mobile Toggler -->
+            <div class="d-flex align-items-center gap-2 order-lg-3">
+                <!-- Theme Switcher Button -->
+                <button class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+                    <i class="bi bi-moon-stars-fill text-secondary"></i>
+                </button>
+
+                <!-- Auth / Profile Chip -->
+                <div class="vf-nav-auth d-flex align-items-center gap-2">
+                    <a href="login.html" class="btn btn-sm btn-vf-outline py-1 px-3">Sign In</a>
+                    <a href="reservation.html" class="btn btn-sm btn-vf-primary py-1 px-3 d-none d-sm-inline-flex">Reserve</a>
+                </div>
+
+                <!-- Mobile Hamburger Toggler -->
+                <button class="navbar-toggler border-0 p-1 ms-1 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Toggle navigation">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <div class="collapse navbar-collapse justify-content-center order-lg-2">
+                <ul class="navbar-nav gap-1">
+                    <li class="nav-item"><a class="vf-nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="vf-nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="vf-nav-link" href="reservation.html">Reservation</a></li>
+                    <li class="nav-item"><a class="vf-nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="vf-nav-link" href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE OFFCANVAS DRAWER -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <div class="d-flex align-items-center gap-2">
+                <div class="vf-brand-logo" style="width:36px; height:36px; font-size:1.1rem;">VF</div>
+                <h5 class="offcanvas-title fw-bold" id="mobileMenuOffcanvasLabel">The Velvet Fork</h5>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
+            <ul class="navbar-nav gap-2 fs-5">
+                <li class="nav-item"><a class="vf-nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="vf-nav-link" href="menu.html">Culinary Menu</a></li>
+                <li class="nav-item"><a class="vf-nav-link" href="reservation.html">Book a Table</a></li>
+                <li class="nav-item"><a class="vf-nav-link" href="about.html">Our Heritage</a></li>
+                <li class="nav-item"><a class="vf-nav-link" href="reviews.html">Guest Reviews</a></li>
+                <li class="nav-item"><a class="vf-nav-link" href="profile.html">VIP Profile</a></li>
+            </ul>
+            <div class="pt-4 border-top d-flex flex-column gap-2">
+                <a href="reservation.html" class="btn btn-vf-primary w-100 justify-content-center">Book an Experience</a>
+                <a href="login.html" class="btn btn-vf-outline w-100 justify-content-center">Member Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="vf-hero">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="vf-badge-pill">
+                            <i class="bi bi-stars"></i> Michelin Guided Culinary Excellence
+                        </span>
+                        <h1 class="vf-hero-title">
+                            Where Culinary Artistry Meets <span class="text-gradient-primary">Velvet Opulence</span>
+                        </h1>
+                        <p class="vf-hero-desc">
+                            Immerse your senses in bespoke gastronomic wonders in the heart of Greater Noida. 
+                            From time-honored heritage gravies to wood-fired artisanal pizzas, each dish is a masterwork of flavor.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 mb-4">
+                            <a href="reservation.html" class="btn btn-vf-primary btn-lg">
+                                <i class="bi bi-calendar-check"></i> Book a Table
+                            </a>
+                            <a href="menu.html" class="btn btn-vf-outline btn-lg">
+                                <i class="bi bi-compass"></i> Explore Menu
+                            </a>
+                        </div>
+                        <div class="row g-3 pt-3 border-top">
+                            <div class="col-4">
+                                <h3 class="fw-bold mb-0 text-warning">4.9★</h3>
+                                <small class="text-muted text-uppercase fw-semibold" style="font-size:0.75rem;">Guest Rating</small>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="fw-bold mb-0 text-warning">30+</h3>
+                                <small class="text-muted text-uppercase fw-semibold" style="font-size:0.75rem;">Master Dishes</small>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="fw-bold mb-0 text-warning">12k+</h3>
+                                <small class="text-muted text-uppercase fw-semibold" style="font-size:0.75rem;">Diners Served</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="vf-hero-img-wrap">
+                            <img src="restaurant image.webp" alt="The Velvet Fork Interior Opulence" loading="eager">
+                            <div class="vf-floating-badge">
+                                <div class="rounded-circle bg-warning bg-opacity-25 text-warning p-2 d-flex align-items-center justify-content-center" style="width:40px; height:40px;">
+                                    <i class="bi bi-award-fill fs-5"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Award of Excellence 2025</h6>
+                                    <small class="text-muted">Michelin Curated Experience</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHEF'S SIGNATURE SELECTIONS -->
+        <section class="py-5 my-3">
+            <div class="container">
+                <div class="text-center max-w-700 mx-auto mb-5">
+                    <span class="vf-badge-pill">Epicurean Highlights</span>
+                    <h2 class="display-6 fw-bold mb-2">Chef's Signature Creations</h2>
+                    <p class="text-muted">Hand-crafted culinary creations perfected with artisanal spices, slow-cooked broths, and authentic wood-fired aromas.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Dish 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="vf-card">
+                            <div class="vf-card-img-wrap">
+                                <img src="pics/butter chicken.jpg" alt="Velvet Butter Chicken" loading="lazy">
+                                <div class="vf-diet-tag">
+                                    <span class="dot-nonveg"></span>
+                                    <span>Non-Veg</span>
+                                </div>
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="fw-bold mb-0">Velvet Butter Chicken</h5>
+                                    <span class="vf-price">₹350</span>
+                                </div>
+                                <p class="text-muted small mb-3 flex-grow-1">
+                                    Smoked tandoori chicken immersed in a velvety satin butter, sun-ripened tomatoes, and organic fenugreek.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                    <span class="text-warning small fw-semibold"><i class="bi bi-star-fill"></i> 4.9 / 5.0</span>
+                                    <a href="menu.html" class="btn btn-sm btn-vf-outline py-1 px-3">Tasting Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dish 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="vf-card">
+                            <div class="vf-card-img-wrap">
+                                <img src="pics/classic-cheese-pizza.jpg" alt="Quattro Formaggi Pizza" loading="lazy">
+                                <div class="vf-diet-tag">
+                                    <span class="dot-veg"></span>
+                                    <span>Veg</span>
+                                </div>
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="fw-bold mb-0">Quattro Formaggi Pizza</h5>
+                                    <span class="vf-price">₹250</span>
+                                </div>
+                                <p class="text-muted small mb-3 flex-grow-1">
+                                    Handcrafted 48-hour fermented sourdough crust topped with Fior di Latte, gorgonzola, aged parmesan, and fontina.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                    <span class="text-warning small fw-semibold"><i class="bi bi-star-fill"></i> 4.9 / 5.0</span>
+                                    <a href="menu.html" class="btn btn-sm btn-vf-outline py-1 px-3">Tasting Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dish 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="vf-card">
+                            <div class="vf-card-img-wrap">
+                                <img src="pics/bihari-mutton-curry.jpg" alt="Royal Awadhi Mutton Korma" loading="lazy">
+                                <div class="vf-diet-tag">
+                                    <span class="dot-nonveg"></span>
+                                    <span>Non-Veg</span>
+                                </div>
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="fw-bold mb-0">Awadhi Mutton Korma</h5>
+                                    <span class="vf-price">₹450</span>
+                                </div>
+                                <p class="text-muted small mb-3 flex-grow-1">
+                                    Slow-braised prime cuts of mutton infused with green cardamom, caramelized shallots, and rich cashew essence.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                    <span class="text-warning small fw-semibold"><i class="bi bi-star-fill"></i> 4.9 / 5.0</span>
+                                    <a href="menu.html" class="btn btn-sm btn-vf-outline py-1 px-3">Tasting Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="menu.html" class="btn btn-vf-primary btn-lg">
+                        Explore Full Culinary Catalog (30+ Dishes) <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHEF'S SECRET UNLISTED MYSTERY SCRATCH CARD -->
+        <section class="py-5">
+            <div class="container">
+                <div class="max-w-700 mx-auto">
+                    <div class="vf-mystery-card" id="vf-mystery-card">
+                        <div id="vf-mystery-cover">
+                            <div class="display-6 text-warning mb-2"><i class="bi bi-stars"></i></div>
+                            <h3 class="fw-bold text-white mb-1">Chef Anurag's Secret Unlisted Tasting Dish</h3>
+                            <p class="text-white-50 small mb-3">Tap anywhere to uncover today's off-menu gastronomic creation & secret VIP booking privilege</p>
+                            <button class="btn btn-sm btn-outline-warning rounded-pill px-4">Tap to Reveal Secret</button>
+                        </div>
+                        <div id="vf-mystery-content" class="d-none">
+                            <div class="badge bg-warning text-dark fw-bold mb-2">Unlocked Today</div>
+                            <h4 class="fw-bold text-white mb-1">Smoked Saffron Paneer Tikka with Wild Forest Honey Glaze</h4>
+                            <p class="text-white-50 small mb-2">Wood-smoked over dried applewood chips, draped in organic Kashmir honeycomb.</p>
+                            <div class="d-inline-block bg-white text-dark py-1 px-3 rounded-pill fw-bold small">
+                                Secret Code: <span class="text-danger fw-bold">VELVETVIP15</span> (15% Off Your Booking)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AMBIANCE & SPATIAL GRANDEUR -->
+        <section class="py-5 bg-body-tertiary">
+            <div class="container py-3">
+                <div class="text-center max-w-700 mx-auto mb-5">
+                    <span class="vf-badge-pill">Atmosphere & Design</span>
+                    <h2 class="display-6 fw-bold mb-2">An Architecture of Intimacy and Grace</h2>
+                    <p class="text-muted">Step inside a sanctuary conceived for memorable celebrations, executive engagements, and romantic evenings.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="vf-card">
+                            <img src="pics/int1.avif" alt="The Grand Dining Salon" style="height:240px; width:100%; object-fit:cover;" loading="lazy">
+                            <div class="card-body p-4">
+                                <h5 class="fw-bold mb-1">The Grand Dining Salon</h5>
+                                <p class="text-muted small mb-0">Plush velvet booths, crystal chandeliers, and acoustic refinement for grand dinner gatherings.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="vf-card">
+                            <img src="pics/int2.avif" alt="Private Wine Sommelier Suite" style="height:240px; width:100%; object-fit:cover;" loading="lazy">
+                            <div class="card-body p-4">
+                                <h5 class="fw-bold mb-1">Private Wine Sommelier Suite</h5>
+                                <p class="text-muted small mb-0">Curated pairings of rare vintage wines alongside artisanal cheeses and charcuterie boards.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="vf-card">
+                            <img src="pics/int3.avif" alt="Romantic Garden Terrace" style="height:240px; width:100%; object-fit:cover;" loading="lazy">
+                            <div class="card-body p-4">
+                                <h5 class="fw-bold mb-1">The Romantic Garden Terrace</h5>
+                                <p class="text-muted small mb-0">Soft ambient candlelight and tranquil botanical planters tailored for intimate couple dining.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GUEST TESTIMONIALS -->
+        <section class="py-5 my-3">
+            <div class="container">
+                <div class="text-center max-w-700 mx-auto mb-5">
+                    <span class="vf-badge-pill">Guest Reflections</span>
+                    <h2 class="display-6 fw-bold mb-2">Cherished by Delhi NCR's Connoisseurs</h2>
+                    <p class="text-muted">Discover firsthand impressions from regular diners, food critics, and celebratory guests.</p>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-4">
+                        <div class="vf-card p-4">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="rounded-circle bg-danger-subtle text-danger fw-bold d-flex align-items-center justify-content-center" style="width:44px; height:44px;">P</div>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Priya Raghavan</h6>
+                                    <small class="text-muted">Verified Connoisseur</small>
+                                </div>
+                                <div class="ms-auto text-warning small">★★★★★</div>
+                            </div>
+                            <p class="text-muted small mb-0 fst-italic">“An absolute revelation in Greater Noida. The Butter Chicken is velvety perfection, and the staff treated our family like royalty.”</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="vf-card p-4">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="rounded-circle bg-danger-subtle text-danger fw-bold d-flex align-items-center justify-content-center" style="width:44px; height:44px;">A</div>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Arjun Singhania</h6>
+                                    <small class="text-muted">Verified VIP Diner</small>
+                                </div>
+                                <div class="ms-auto text-warning small">★★★★★</div>
+                            </div>
+                            <p class="text-muted small mb-0 fst-italic">“The Awadhi Mutton Korma took me back to Lucknow’s heritage royal kitchens. The wine collection is impeccably curated.”</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="vf-card p-4">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="rounded-circle bg-danger-subtle text-danger fw-bold d-flex align-items-center justify-content-center" style="width:44px; height:44px;">N</div>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Neha & Kabir</h6>
+                                    <small class="text-muted">Anniversary Dinner</small>
+                                </div>
+                                <div class="ms-auto text-warning small">★★★★★</div>
+                            </div>
+                            <p class="text-muted small mb-0 fst-italic">“From personalized welcome drinks to the complimentary dessert celebration, The Velvet Fork made our 5th anniversary unforgettable!”</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="reviews.html" class="btn btn-vf-outline">
+                        Read All Guest Stories & Submit Review <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOCATION & CONCIERGE -->
+        <section class="py-5 bg-body-tertiary">
+            <div class="container py-3">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="vf-badge-pill">Concierge & Destination</span>
+                        <h2 class="display-6 fw-bold mb-3">Visit Our Dining Sanctuary</h2>
+                        <p class="text-muted mb-4">
+                            Nestled in the prestigious Alpha 2 enclave of Greater Noida, The Velvet Fork welcomes guests 
+                            seven days a week. Valet parking, private event hosting, and bespoke culinary catering are available.
+                        </p>
+
+                        <div class="d-flex flex-column gap-3 mb-4">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="rounded-circle bg-primary bg-opacity-10 text-primary p-2 d-flex align-items-center justify-content-center" style="width:38px; height:38px;">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Location</h6>
+                                    <small class="text-muted">Alpha 2, Commercial Belt, Greater Noida, UP 201310</small>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="rounded-circle bg-primary bg-opacity-10 text-primary p-2 d-flex align-items-center justify-content-center" style="width:38px; height:38px;">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Concierge Hotline</h6>
+                                    <small class="text-muted">+91 8709547016 • velvetfork@gmail.com</small>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="rounded-circle bg-primary bg-opacity-10 text-primary p-2 d-flex align-items-center justify-content-center" style="width:38px; height:38px;">
+                                    <i class="bi bi-clock-fill"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Hours of Service</h6>
+                                    <small class="text-muted">Mon – Sun: 11:00 AM – 11:30 PM (Kitchen closes 11:00 PM)</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="reservation.html" class="btn btn-vf-primary btn-lg">
+                            <i class="bi bi-calendar-check me-1"></i> Book Your Table Now
+                        </a>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="vf-card p-2 rounded-4 overflow-hidden shadow">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7014.268656553588!2d77.51609709999997!3d28.47550100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1748248159780!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="360" 
+                                style="border:0; border-radius:0.75rem;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="The Velvet Fork Map Location">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="vf-footer">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="vf-brand mb-3">
+                        <div class="vf-brand-logo">VF</div>
+                        <div>
+                            <h4 class="vf-brand-title">The Velvet Fork</h4>
+                            <span class="vf-brand-sub">Haute Cuisine • Greater Noida</span>
+                        </div>
+                    </div>
+                    <p class="text-muted small mb-4">
+                        An exquisite sanctuary dedicated to gastronomic passion, heritage Indian recipes, 
+                        and artisanal global flavors presented in timeless luxury.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="https://facebook.com" class="vf-social-btn" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://instagram.com" class="vf-social-btn" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://x.com" class="vf-social-btn" target="_blank" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://linkedin.com" class="vf-social-btn" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6 class="fw-bold mb-3">Curated Links</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="index.html" class="vf-footer-link">Home Sanctuary</a></li>
+                        <li><a href="menu.html" class="vf-footer-link">Culinary Menu</a></li>
+                        <li><a href="reservation.html" class="vf-footer-link">Table Reservations</a></li>
+                        <li><a href="about.html" class="vf-footer-link">Our Heritage</a></li>
+                        <li><a href="reviews.html" class="vf-footer-link">Guest Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-6">
+                    <h6 class="fw-bold mb-3">Concierge</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
+                        <li><i class="bi bi-geo-alt me-2 text-danger"></i> Alpha 2, Greater Noida</li>
+                        <li><i class="bi bi-telephone me-2 text-danger"></i> +91 8709547016</li>
+                        <li><i class="bi bi-envelope me-2 text-danger"></i> velvetfork@gmail.com</li>
+                        <li><i class="bi bi-clock me-2 text-danger"></i> Mon–Sun: 11:00 AM – 11:30 PM</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">VIP Gastronomy Circle</h6>
+                    <p class="text-muted small mb-3">
+                        Receive private tasting invitations, seasonal menu updates, and cellar releases.
+                    </p>
+                    <form class="newsletter-form d-flex gap-2">
+                        <input type="email" class="form-control form-control-sm rounded-pill" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-sm btn-vf-primary px-3 rounded-pill" aria-label="Subscribe">
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pt-4 border-top d-flex justify-content-between align-items-center flex-wrap gap-2 small text-muted">
+                <div>&copy; 2025 The Velvet Fork. All Rights Reserved.</div>
+                <div>Designed with <span class="text-danger">♥</span> by The Velvet Fork Culinary & Design Group</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AMBIENT LOUNGE ATMOSPHERE PLAYER (GLOBAL) -->
+    <div class="vf-audio-player-bar" id="vf-global-audio-player">
+        <button class="vf-audio-play-btn" id="vf-audio-toggle" aria-label="Toggle Lounge Atmosphere">
+            <i class="bi bi-play-fill" id="vf-audio-icon"></i>
+        </button>
+        <div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="small fw-bold">Atmosphere: Parisian Lounge</span>
+                <div class="vf-audio-wave" id="vf-audio-wave">
+                    <span class="vf-audio-bar"></span>
+                    <span class="vf-audio-bar"></span>
+                    <span class="vf-audio-bar"></span>
+                </div>
+            </div>
+            <small class="text-muted d-block" style="font-size:0.72rem;">Acoustic Chords • Soft Velvet Mood</small>
+        </div>
+    </div>
+
+    <!-- SIMULATED LUXURY AI CONCIERGE CHAT WIDGET (GLOBAL) -->
+    <button class="vf-ai-concierge-btn" id="vf-concierge-toggle" aria-label="Open Velvet Concierge">
+        <i class="bi bi-chat-dots-fill"></i>
+        <span class="vf-ai-badge-pulse"></span>
+    </button>
+
+    <div class="vf-concierge-window" id="vf-concierge-window">
+        <div class="vf-concierge-header">
+            <div class="d-flex align-items-center gap-2">
+                <div class="rounded-circle bg-white text-danger d-flex align-items-center justify-content-center fw-bold" style="width:30px; height:30px; font-size:0.85rem;">VF</div>
+                <div>
+                    <h6 class="mb-0 fw-bold text-white">Velvet AI Concierge</h6>
+                    <small class="text-white-50" style="font-size:0.7rem;"><i class="bi bi-circle-fill text-success" style="font-size:0.5rem;"></i> Active • Fine Dining Butler</small>
+                </div>
+            </div>
+            <button class="btn btn-sm text-white p-0" id="vf-concierge-close" aria-label="Close Concierge"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="vf-chat-messages" id="vf-chat-messages">
+            <div class="vf-msg-bubble vf-msg-bot">
+                Good evening, Connoisseur. I am your Velvet Fork concierge. How may I assist your dining plans today?
+            </div>
+            <div class="d-flex flex-wrap gap-1 mt-1">
+                <button class="vf-prompt-chip" data-prompt="wine">🍷 Best wine pairings?</button>
+                <button class="vf-prompt-chip" data-prompt="veg">🥗 Vegetarian signatures?</button>
+                <button class="vf-prompt-chip" data-prompt="hours">🕒 Timings & Valet?</button>
+                <button class="vf-prompt-chip" data-prompt="reserve">📅 Book a table</button>
+            </div>
+        </div>
+        <form class="p-2 bg-surface border-top d-flex gap-2" id="vf-concierge-form">
+            <input type="text" id="vf-concierge-input" class="form-control form-control-sm rounded-pill" placeholder="Ask about menu, pairings, bookings..." required>
+            <button type="submit" class="btn btn-sm btn-vf-primary rounded-circle" style="width:32px; height:32px; padding:0; display:flex; align-items:center; justify-content:center;">
+                <i class="bi bi-arrow-up"></i>
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>

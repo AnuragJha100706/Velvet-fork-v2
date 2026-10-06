@@ -7,47 +7,47 @@
 // --- 1. INITIAL CATALOG & SAMPLE DATA ---
 const MENU_CATALOG = [
     // North Indian
-    { id: 'shahi-paneer', title: 'Shahi Paneer Artisanal', category: 'north-indian', isVeg: true, price: 210, rating: 4.8, img: 'pics/shahi-paneer.jpg', ingredients: 'Fresh cottage cheese, cashew paste, rich tomato reduction, fresh dairy cream, royal garam masala, Kashmiri saffron.' },
-    { id: 'mix-veg', title: 'Heritage Mixed Vegetables', category: 'north-indian', isVeg: true, price: 170, rating: 4.2, img: 'pics/mixed-veg.jpg', ingredients: 'Farm-fresh florets, baby carrots, French beans, green peas simmered in a spiced onion-tomato gravy.' },
-    { id: 'aloo-dum', title: 'Kashmiri Dum Aloo', category: 'north-indian', isVeg: true, price: 260, rating: 4.6, img: 'pics/dum-aloo.jpg', ingredients: 'Baby potatoes slow-simmered in a robust fennel and ginger infused Kashmiri chili gravy.' },
-    { id: 'palak-paneer', title: 'Palak Paneer Velvet', category: 'north-indian', isVeg: true, price: 250, rating: 4.7, img: 'pics/palak-paneer.jpg', ingredients: 'Pureed baby spinach tempered with garlic, cumin, and velvety cottage cheese cubes with churned butter.' },
-    { id: 'kadai-paneer', title: 'Charred Kadai Paneer', category: 'north-indian', isVeg: true, price: 190, rating: 4.5, img: 'pics/kadai-paneer.jpg', ingredients: 'Wok-tossed bell peppers, diced onions, and cottage cheese in freshly pounded coriander-chili kadai masala.' },
-    { id: 'chicken-curry', title: 'Grand Trunk Chicken Curry', category: 'north-indian', isVeg: false, price: 250, rating: 4.7, img: 'pics/Chicken-Curry.jpg', ingredients: 'Tender bone-in farm chicken simmered in traditional caramelized onion and whole spice broth.' },
-    { id: 'mutton-korma', title: 'Royal Awadhi Mutton Korma', category: 'north-indian', isVeg: false, price: 450, rating: 4.9, img: 'pics/bihari-mutton-curry.jpg', ingredients: 'Slow-cooked prime cuts of mutton in velvety yogurt, almond essence, and aromatic kewra spices.' },
-    { id: 'fish-curry', title: 'Coastal Mustard Fish Curry', category: 'north-indian', isVeg: false, price: 320, rating: 4.6, img: 'pics/fish-curry.jpg', ingredients: 'Fresh river fillet simmered in a delicate mustard, green chili, and kokum tomato broth.' },
-    { id: 'butter-chicken', title: 'Velvet Butter Chicken', category: 'north-indian', isVeg: false, price: 350, rating: 4.9, img: 'pics/butter chicken.jpg', ingredients: 'Smoked tandoori chicken shreds immersed in a rich satin butter, sun-ripened tomato, and fenugreek gravy.' },
-    { id: 'mutton-curry', title: 'Bihari Champaran Meat', category: 'north-indian', isVeg: false, price: 410, rating: 4.8, img: 'pics/bihari-mutton-curry.jpg', ingredients: 'Clay-pot earthen cooked mutton with whole garlic pods, cold-pressed mustard oil, and rustic regional spices.' },
+    { id: 'shahi-paneer', title: 'Shahi Paneer Artisanal', category: 'north-indian', isVeg: true, price: 210, rating: 4.8, img: '../pics/shahi-paneer.jpg', ingredients: 'Fresh cottage cheese, cashew paste, rich tomato reduction, fresh dairy cream, royal garam masala, Kashmiri saffron.' },
+    { id: 'mix-veg', title: 'Heritage Mixed Vegetables', category: 'north-indian', isVeg: true, price: 170, rating: 4.2, img: '../pics/mixed-veg.jpg', ingredients: 'Farm-fresh florets, baby carrots, French beans, green peas simmered in a spiced onion-tomato gravy.' },
+    { id: 'aloo-dum', title: 'Kashmiri Dum Aloo', category: 'north-indian', isVeg: true, price: 260, rating: 4.6, img: '../pics/dum-aloo.jpg', ingredients: 'Baby potatoes slow-simmered in a robust fennel and ginger infused Kashmiri chili gravy.' },
+    { id: 'palak-paneer', title: 'Palak Paneer Velvet', category: 'north-indian', isVeg: true, price: 250, rating: 4.7, img: '../pics/palak-paneer.jpg', ingredients: 'Pureed baby spinach tempered with garlic, cumin, and velvety cottage cheese cubes with churned butter.' },
+    { id: 'kadai-paneer', title: 'Charred Kadai Paneer', category: 'north-indian', isVeg: true, price: 190, rating: 4.5, img: '../pics/kadai-paneer.jpg', ingredients: 'Wok-tossed bell peppers, diced onions, and cottage cheese in freshly pounded coriander-chili kadai masala.' },
+    { id: 'chicken-curry', title: 'Grand Trunk Chicken Curry', category: 'north-indian', isVeg: false, price: 250, rating: 4.7, img: '../pics/Chicken-Curry.jpg', ingredients: 'Tender bone-in farm chicken simmered in traditional caramelized onion and whole spice broth.' },
+    { id: 'mutton-korma', title: 'Royal Awadhi Mutton Korma', category: 'north-indian', isVeg: false, price: 450, rating: 4.9, img: '../pics/bihari-mutton-curry.jpg', ingredients: 'Slow-cooked prime cuts of mutton in velvety yogurt, almond essence, and aromatic kewra spices.' },
+    { id: 'fish-curry', title: 'Coastal Mustard Fish Curry', category: 'north-indian', isVeg: false, price: 320, rating: 4.6, img: '../pics/fish-curry.jpg', ingredients: 'Fresh river fillet simmered in a delicate mustard, green chili, and kokum tomato broth.' },
+    { id: 'butter-chicken', title: 'Velvet Butter Chicken', category: 'north-indian', isVeg: false, price: 350, rating: 4.9, img: '../pics/butter chicken.jpg', ingredients: 'Smoked tandoori chicken shreds immersed in a rich satin butter, sun-ripened tomato, and fenugreek gravy.' },
+    { id: 'mutton-curry', title: 'Bihari Champaran Meat', category: 'north-indian', isVeg: false, price: 410, rating: 4.8, img: '../pics/bihari-mutton-curry.jpg', ingredients: 'Clay-pot earthen cooked mutton with whole garlic pods, cold-pressed mustard oil, and rustic regional spices.' },
 
     // South Indian
-    { id: 'uttapam', title: 'Onion Tomato Uttapam', category: 'south-indian', isVeg: true, price: 170, rating: 4.5, img: 'pics/uttapam.jpg', ingredients: 'Fermented stone-ground rice & lentil pancake topped with shallots, heirloom tomatoes, and curry leaves.' },
-    { id: 'vada-sambar', title: 'Crispy Medu Vada Sambar', category: 'south-indian', isVeg: true, price: 160, rating: 4.3, img: 'pics/Vada sambar.jpg', ingredients: 'Golden crisp urad dal fritters served with piping hot drumstick-lentil sambar and coconut relish.' },
-    { id: 'thatte-idly', title: 'Bidadi Thatte Idli', category: 'south-indian', isVeg: true, price: 180, rating: 4.6, img: 'pics/thatte idly.jpg', ingredients: 'Steamed plate-sized fluffy rice cakes draped in spiced podi butter and fresh coconut chutney.' },
-    { id: 'masala-dosa', title: 'Ghee Roast Masala Dosa', category: 'south-indian', isVeg: true, price: 210, rating: 4.8, img: 'pics/masala dosa.jpg', ingredients: 'Paper-thin golden crepe roasted in pure A2 cow ghee, filled with spiced tempered potato mash.' },
-    { id: 'idli-coconut-chutney', title: 'Steamed Button Idlis', category: 'south-indian', isVeg: true, price: 120, rating: 4.4, img: 'pics/idli coconut chutny.jpg', ingredients: 'Soft steamed pearl idlis served with trio of chutneys: grated coconut, roasted tomato, and mint.' },
+    { id: 'uttapam', title: 'Onion Tomato Uttapam', category: 'south-indian', isVeg: true, price: 170, rating: 4.5, img: '../pics/uttapam.jpg', ingredients: 'Fermented stone-ground rice & lentil pancake topped with shallots, heirloom tomatoes, and curry leaves.' },
+    { id: 'vada-sambar', title: 'Crispy Medu Vada Sambar', category: 'south-indian', isVeg: true, price: 160, rating: 4.3, img: '../pics/Vada sambar.jpg', ingredients: 'Golden crisp urad dal fritters served with piping hot drumstick-lentil sambar and coconut relish.' },
+    { id: 'thatte-idly', title: 'Bidadi Thatte Idli', category: 'south-indian', isVeg: true, price: 180, rating: 4.6, img: '../pics/thatte idly.jpg', ingredients: 'Steamed plate-sized fluffy rice cakes draped in spiced podi butter and fresh coconut chutney.' },
+    { id: 'masala-dosa', title: 'Ghee Roast Masala Dosa', category: 'south-indian', isVeg: true, price: 210, rating: 4.8, img: '../pics/masala dosa.jpg', ingredients: 'Paper-thin golden crepe roasted in pure A2 cow ghee, filled with spiced tempered potato mash.' },
+    { id: 'idli-coconut-chutney', title: 'Steamed Button Idlis', category: 'south-indian', isVeg: true, price: 120, rating: 4.4, img: '../pics/idli coconut chutny.jpg', ingredients: 'Soft steamed pearl idlis served with trio of chutneys: grated coconut, roasted tomato, and mint.' },
 
     // Chinese
-    { id: 'hakka-noodles', title: 'Wok-Tossed Hakka Noodles', category: 'chinese', isVeg: true, price: 180, rating: 4.5, img: 'pics/Hakka-Noodles-.jpg', ingredients: 'Hand-pulled noodles stir-fried in high-heat wok with julienne bell peppers, scallions, and light soy.' },
-    { id: 'schezwan-fried-rice', title: 'Fire Schezwan Fried Rice', category: 'chinese', isVeg: true, price: 200, rating: 4.6, img: 'pics/schezwan  fried rice.jpg', ingredients: 'Fragrant jasmine rice tossed with fiery Sichuan peppercorns, roasted red chilies, and scallions.' },
-    { id: 'manchurian-fried-rice', title: 'Crispy Manchurian Rice Bowl', category: 'chinese', isVeg: true, price: 230, rating: 4.7, img: 'pics/manchurian-fried-rice.jpg', ingredients: 'Golden vegetable dumplings glazed in spicy coriander-ginger sauce served over wok fried rice.' },
-    { id: 'manchurian-noodles', title: 'Manchurian with Noodles', category: 'chinese', isVeg: true, price: 240, rating: 4.6, img: 'pics/manchurian-noodle.jpg', ingredients: 'Tender vegetable Manchurian spheres tossed with silky wheat noodles and dark garlic soy.' },
-    { id: 'paneer-chilly-noodles', title: 'Paneer Chili Noodles', category: 'chinese', isVeg: true, price: 270, rating: 4.7, img: 'pics/paneer noddle.jpg', ingredients: 'Crispy tossed cottage cheese cubes, bird’s eye chili, scallions, and sesame wok noodles.' },
+    { id: 'hakka-noodles', title: 'Wok-Tossed Hakka Noodles', category: 'chinese', isVeg: true, price: 180, rating: 4.5, img: '../pics/Hakka-Noodles-.jpg', ingredients: 'Hand-pulled noodles stir-fried in high-heat wok with julienne bell peppers, scallions, and light soy.' },
+    { id: 'schezwan-fried-rice', title: 'Fire Schezwan Fried Rice', category: 'chinese', isVeg: true, price: 200, rating: 4.6, img: '../pics/schezwan  fried rice.jpg', ingredients: 'Fragrant jasmine rice tossed with fiery Sichuan peppercorns, roasted red chilies, and scallions.' },
+    { id: 'manchurian-fried-rice', title: 'Crispy Manchurian Rice Bowl', category: 'chinese', isVeg: true, price: 230, rating: 4.7, img: '../pics/manchurian-fried-rice.jpg', ingredients: 'Golden vegetable dumplings glazed in spicy coriander-ginger sauce served over wok fried rice.' },
+    { id: 'manchurian-noodles', title: 'Manchurian with Noodles', category: 'chinese', isVeg: true, price: 240, rating: 4.6, img: '../pics/manchurian-noodle.jpg', ingredients: 'Tender vegetable Manchurian spheres tossed with silky wheat noodles and dark garlic soy.' },
+    { id: 'paneer-chilly-noodles', title: 'Paneer Chili Noodles', category: 'chinese', isVeg: true, price: 270, rating: 4.7, img: '../pics/paneer noddle.jpg', ingredients: 'Crispy tossed cottage cheese cubes, bird’s eye chili, scallions, and sesame wok noodles.' },
 
     // Italian
-    { id: 'garlic-bread', title: 'Artisan Herb Garlic Bread', category: 'italian', isVeg: true, price: 120, rating: 4.3, img: 'pics/garlic-bread.jpg', ingredients: 'Toasted rustic sourdough baguette drenched in garlic-herb butter, roasted parsley, and sea salt.' },
-    { id: 'four-cheese-pizza', title: 'Quattro Formaggi Sourdough', category: 'italian', isVeg: true, price: 250, rating: 4.9, img: 'pics/classic-cheese-pizza.jpg', ingredients: 'Wood-fired sourdough crust topped with Italian Fior di Latte mozzarella, gorgonzola, parmesan, and fontina.' },
-    { id: 'alfredo-pasta', title: 'Fettuccine Truffle Alfredo', category: 'italian', isVeg: true, price: 210, rating: 4.5, img: 'pics/alfredo_pasta.jpg', ingredients: 'Handmade fettuccine enveloped in rich parmesan cream sauce, cracked black pepper, and white truffle oil.' },
-    { id: 'spaghetti', title: 'Spaghetti Pomodoro Basilico', category: 'italian', isVeg: true, price: 280, rating: 4.4, img: 'pics/spaghetti.jpg', ingredients: 'Al dente durum wheat spaghetti with San Marzano tomato reduction, extra virgin olive oil, and fresh basil.' },
-    { id: 'risotto', title: 'Wild Mushroom Risotto', category: 'italian', isVeg: true, price: 350, rating: 4.6, img: 'pics/risotto.jpg', ingredients: 'Arborio rice slow-stirred with porcini and cremini mushrooms, white wine reduction, and 24-month aged parmesan.' },
+    { id: 'garlic-bread', title: 'Artisan Herb Garlic Bread', category: 'italian', isVeg: true, price: 120, rating: 4.3, img: '../pics/garlic-bread.jpg', ingredients: 'Toasted rustic sourdough baguette drenched in garlic-herb butter, roasted parsley, and sea salt.' },
+    { id: 'four-cheese-pizza', title: 'Quattro Formaggi Sourdough', category: 'italian', isVeg: true, price: 250, rating: 4.9, img: '../pics/classic-cheese-pizza.jpg', ingredients: 'Wood-fired sourdough crust topped with Italian Fior di Latte mozzarella, gorgonzola, parmesan, and fontina.' },
+    { id: 'alfredo-pasta', title: 'Fettuccine Truffle Alfredo', category: 'italian', isVeg: true, price: 210, rating: 4.5, img: '../pics/alfredo_pasta.jpg', ingredients: 'Handmade fettuccine enveloped in rich parmesan cream sauce, cracked black pepper, and white truffle oil.' },
+    { id: 'spaghetti', title: 'Spaghetti Pomodoro Basilico', category: 'italian', isVeg: true, price: 280, rating: 4.4, img: '../pics/spaghetti.jpg', ingredients: 'Al dente durum wheat spaghetti with San Marzano tomato reduction, extra virgin olive oil, and fresh basil.' },
+    { id: 'risotto', title: 'Wild Mushroom Risotto', category: 'italian', isVeg: true, price: 350, rating: 4.6, img: '../pics/risotto.jpg', ingredients: 'Arborio rice slow-stirred with porcini and cremini mushrooms, white wine reduction, and 24-month aged parmesan.' },
 
     // Continental
-    { id: 'caesar-salad', title: 'Classic Caesar Crunch', category: 'continental', isVeg: true, price: 220, rating: 4.4, img: 'pics/ceasar salad.jpg', ingredients: 'Crisp romaine lettuce hearts, garlic-herb sourdough croutons, shaved pecorino, and creamy house dressing.' },
+    { id: 'caesar-salad', title: 'Classic Caesar Crunch', category: 'continental', isVeg: true, price: 220, rating: 4.4, img: '../pics/ceasar salad.jpg', ingredients: 'Crisp romaine lettuce hearts, garlic-herb sourdough croutons, shaved pecorino, and creamy house dressing.' },
 
     // Beverages
-    { id: 'mango-smoothie', title: 'Alphonso Mango Smoothie', category: 'beverages', isVeg: true, price: 120, rating: 4.8, img: 'pics/Mango-Smoothie.jpg', ingredients: 'Sun-ripened Ratnagiri Alphonso mango pulp churned with rich Greek yogurt and chia seeds.' },
-    { id: 'cold-coffee', title: 'Bourbon Roast Cold Coffee', category: 'beverages', isVeg: true, price: 100, rating: 4.4, img: 'pics/cold coffee.jpg', ingredients: 'Double-shot espresso cold-brewed for 18 hours, full-fat milk, dark cacao, and Madagascar vanilla.' },
-    { id: 'beer', title: 'Belgian Crafted Draught (Pint)', category: 'beverages', isVeg: true, price: 160, rating: 4.7, img: 'pics/beer.jpg', ingredients: 'Chilled artisanal wheat ale infused with subtle hints of orange peel, coriander, and European hops.' },
-    { id: 'red-wine', title: 'Reserve Pinot Noir (Glass)', category: 'beverages', isVeg: true, price: 300, rating: 4.9, img: 'pics/red wine.jpg', ingredients: 'Full-bodied oak-matured red wine boasting velvety tannins, ripe dark cherry, and cocoa aromas.' },
-    { id: 'lassi', title: 'Royal Malai Kesar Lassi', category: 'beverages', isVeg: true, price: 80, rating: 4.6, img: 'pics/lassi.jpg', ingredients: 'Slow-churned thick earthen yogurt crowned with pistachio slivers, cardamom, and Kashmiri saffron.' }
+    { id: 'mango-smoothie', title: 'Alphonso Mango Smoothie', category: 'beverages', isVeg: true, price: 120, rating: 4.8, img: '../pics/Mango-Smoothie.jpg', ingredients: 'Sun-ripened Ratnagiri Alphonso mango pulp churned with rich Greek yogurt and chia seeds.' },
+    { id: 'cold-coffee', title: 'Bourbon Roast Cold Coffee', category: 'beverages', isVeg: true, price: 100, rating: 4.4, img: '../pics/cold coffee.jpg', ingredients: 'Double-shot espresso cold-brewed for 18 hours, full-fat milk, dark cacao, and Madagascar vanilla.' },
+    { id: 'beer', title: 'Belgian Crafted Draught (Pint)', category: 'beverages', isVeg: true, price: 160, rating: 4.7, img: '../pics/beer.jpg', ingredients: 'Chilled artisanal wheat ale infused with subtle hints of orange peel, coriander, and European hops.' },
+    { id: 'red-wine', title: 'Reserve Pinot Noir (Glass)', category: 'beverages', isVeg: true, price: 300, rating: 4.9, img: '../pics/red wine.jpg', ingredients: 'Full-bodied oak-matured red wine boasting velvety tannins, ripe dark cherry, and cocoa aromas.' },
+    { id: 'lassi', title: 'Royal Malai Kesar Lassi', category: 'beverages', isVeg: true, price: 80, rating: 4.6, img: '../pics/lassi.jpg', ingredients: 'Slow-churned thick earthen yogurt crowned with pistachio slivers, cardamom, and Kashmiri saffron.' }
 ];
 
 const DEFAULT_REVIEWS = [
@@ -186,7 +186,7 @@ class VelvetDataService {
                     email: 'lucky@velvetfork.com',
                     phone: '+91 8709547016',
                     points: 450,
-                    avatar: 'pics/profile.jpg',
+                    avatar: '../pics/profile.jpg',
                     favorites: ['butter-chicken', 'four-cheese-pizza', 'red-wine', 'shahi-paneer']
                 },
                 {
@@ -195,7 +195,7 @@ class VelvetDataService {
                     email: 'arpit@velvetfork.com',
                     phone: '+91 9876543210',
                     points: 300,
-                    avatar: 'pics/profile.jpg',
+                    avatar: '../pics/profile.jpg',
                     favorites: ['chicken-curry', 'vada-sambar', 'aloo-dum']
                 }
             ]));
@@ -225,7 +225,7 @@ class VelvetDataService {
             name: username,
             email: `${username}@velvetfork.com`,
             points: 150,
-            avatar: 'pics/profile.jpg',
+            avatar: '../pics/profile.jpg',
             favorites: []
         };
     }
@@ -259,7 +259,7 @@ class VelvetDataService {
                 name: username,
                 email: `${username}@velvetfork.com`,
                 points: 100,
-                avatar: 'pics/profile.jpg',
+                avatar: '../pics/profile.jpg',
                 favorites: []
             };
             users.push(guestUser);
@@ -283,7 +283,7 @@ class VelvetDataService {
             phone,
             password,
             points: 200,
-            avatar: 'pics/profile.jpg',
+            avatar: '../pics/profile.jpg',
             favorites: []
         };
         users.push(newUser);
@@ -480,7 +480,7 @@ function initGlobalNavigation() {
         if (user) {
             container.innerHTML = `
                 <a href="profile.html" class="vf-user-chip" title="My VIP Profile">
-                    <img src="${user.avatar || 'pics/profile.jpg'}" alt="${user.name}">
+                    <img src="${user.avatar || '../pics/profile.jpg'}" alt="${user.name}">
                     <span>${user.name.split(' ')[0]}</span>
                 </a>
                 <button class="btn btn-sm btn-vf-outline logout-btn-trigger py-1 px-3" title="Sign Out">
@@ -1355,7 +1355,7 @@ function initProfilePage() {
     if (nameEl) nameEl.textContent = user.name || user.username;
     if (emailEl) emailEl.textContent = user.email || 'member@velvetfork.com';
     if (pointsEl) pointsEl.textContent = `${user.points || 0} pts`;
-    if (avatarImg) avatarImg.src = user.avatar || 'pics/profile.jpg';
+    if (avatarImg) avatarImg.src = user.avatar || '../pics/profile.jpg';
 
     // Avatar Upload Handler
     const avatarInput = document.getElementById('avatar-file-input');

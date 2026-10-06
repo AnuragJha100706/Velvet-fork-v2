@@ -60,27 +60,34 @@ The system is engineered with a **Dual-Tier Resilient Architecture**: a rich cli
 
 ```text
 Advance Web Tech project/
-├── index.html              # Main Landing & Hero Showcase
-├── menu.html               # Artisanal Menu, Sommelier & Tasting Tray
-├── reservation.html        # Interactive Floor Plan & Booking Engine
-├── about.html              # Genesis Story & Founder/Chef Anurag Jha
-├── reviews.html            # Verified Guest Reviews & Sentiment Filtering
-├── login.html              # Guest Sign-In & Member Registration
-├── profile.html            # User Dining Dashboard & Reservation History
-├── styles.css              # Custom Luxury Design System & Dark Mode Engine
-├── main.js                 # Unified JavaScript Engine, Web Audio & API Bridge
-├── menu-data.json          # Artisanal Dish & Wine Catalogue Data
-├── restaurant image.webp   # High-Resolution Architectural Cover Imagery
+├── index.html              # Main Landing Root Redirect Entrypoint
 ├── README.md               # Project Documentation & Viva Guide
+├── .gitignore              # Git Ignore Configuration
+├── LICENSE                 # Project License
 │
-├── backend/                # Python Flask REST API
-│   ├── app.py              # Flask Application Server (Port 4000)
-│   └── data/               # Persistent Data Storage
-│       ├── users.json      # Registered User Accounts
-│       ├── reservations.json # Booking Records
-│       └── feedback.json   # Guest Ratings & Reviews
+├── frontend/               # Complete Frontend Web Application
+│   ├── html/               # All HTML Web Pages
+│   │   ├── index.html      # Main Landing & Hero Showcase
+│   │   ├── menu.html       # Artisanal Menu, Sommelier & Tasting Tray
+│   │   ├── reservation.html# Interactive Floor Plan & Booking Engine
+│   │   ├── about.html      # Genesis Story & Founder/Chef Anurag Jha
+│   │   ├── reviews.html    # Verified Guest Reviews & Sentiment Filtering
+│   │   ├── login.html      # Guest Sign-In & Member Registration
+│   │   └── profile.html    # User Dining Dashboard & Reservation History
+│   ├── css/                # Stylesheets
+│   │   └── styles.css      # Custom Luxury Design System & Dark Mode Engine
+│   ├── js/                 # Client Logic & Scripts
+│   │   └── main.js         # Unified JavaScript Engine, Web Audio & API Bridge
+│   ├── pics/               # Culinary Imagery & Chef Photography
+│   ├── restaurant image.webp # High-Resolution Architectural Cover Imagery
+│   └── menu-data.json      # Artisanal Dish & Wine Catalogue Data
 │
-└── pics/                   # Culinary Imagery & Chef Photography
+└── backend/                # Python Flask REST API
+    ├── app.py              # Flask Application Server (Port 4000)
+    └── data/               # Persistent Data Storage
+        ├── users.json      # Registered User Accounts
+        ├── reservations.json # Booking Records
+        └── feedback.json   # Guest Ratings & Reviews
 ```
 
 ---
